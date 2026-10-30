@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Найди пару</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="game">
+      <header class="game-header">
+        <h1>Найди пару</h1>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Ходы</span>
+            <span class="stat-value" id="moves">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Время</span>
+            <span class="stat-value" id="time">0:00</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="board" id="board"></div>
+
+      <button class="restart-btn" id="restartBtn">Начать заново</button>
+    </div>
+
+    <!-- Экран победы -->
+    <div class="win-overlay" id="winOverlay">
+      <div class="win-box">
+        <div class="win-emoji">🎉</div>
+        <h2>Победа!</h2>
+        <p>Вы нашли все пары</p>
+        <div class="win-stats">
+          <div>Ходов: <strong id="winMoves">0</strong></div>
+          <div>Время: <strong id="winTime">0:00</strong></div>
+        </div>
+        <button class="play-again-btn" id="playAgainBtn">Играть снова</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
